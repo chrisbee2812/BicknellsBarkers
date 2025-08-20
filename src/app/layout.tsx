@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -24,7 +25,10 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow">
+          {children}
+          <SpeedInsights />
+        </main>
         <Footer />
         <Toaster />
       </body>

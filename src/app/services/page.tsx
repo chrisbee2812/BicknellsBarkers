@@ -16,14 +16,14 @@ const services = [
   {
     icon: Sun,
     title: "Doggy Daycare",
-    price: "£25 / day",
+    price: "£30 / day",
     description: "A fun-filled day of supervised play, socialization, and activities to keep your dog happy and engaged while you're away. Here's a look at our daily schedule:",
     features: daycareFeatures
   },
   {
     icon: Moon,
     title: "Overnight Boarding",
-    price: "Starting at £40 / night",
+    price: "Weekdays £40 / 24hrs, Weekends £42.50 / 24hrs",
     description: "A safe, comfortable, and loving environment for your dog to stay when you're out of town. Our boarders enjoy the full daycare experience, plus a relaxing evening routine.",
     features: [
       "Our boarders enjoy the full daycare itinerary, plus:",

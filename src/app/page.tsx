@@ -6,12 +6,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { PawPrint, Bone, Heart, Moon, Sun } from 'lucide-react';
 
 const featuredDogs = [
-  { name: 'Buddy', breed: 'Golden Retriever', image: '/dog1.jpg', hint: 'golden retriever' },
-  { name: 'Lucy', breed: 'Poodle', image: '/dog2.jpg', hint: 'poodle dog' },
-  { name: 'Max', breed: 'Beagle', image: '/dog3.jpg', hint: 'beagle puppy' },
-  { name: 'Daisy', breed: 'German Shepherd', image: '/dog4.jpg', hint: 'german shepherd' },
-  { name: 'Rocky', breed: 'Bulldog', image: '/dog5.jpg', hint: 'bulldog puppy' },
-  { name: 'Burt', breed: 'Bulldog', image: '/dog6.jpg', hint: 'bulldog puppy' }
+  { name: 'Frodo', breed: 'Puggle', image: '/dog1.jpg', hint: 'puggle' },
+  { name: 'Elsie', breed: 'Miniatur LH Daschund', image: '/dog2.jpg', hint: 'miniature long haired daschund' },
+  { name: 'Night On The Beach', breed: 'Various Breeds', image: '/dog3.jpg', hint: 'night on the beach' },
+  { name: 'Nina', breed: 'Newfoundland', image: '/dog4.jpg', hint: 'newfoundland' },
+  { name: 'Buddy and Lucca', breed: 'Cockapoo and Cocker Spaniel', image: '/dog5.jpg', hint: 'Cockapoo and Cocker Spaniel' },
+  { name: 'Cosmo', breed: 'Golden Retriever', image: '/dog6.jpg', hint: 'golden retriever' }
 ];
 
 export default function Home() {
