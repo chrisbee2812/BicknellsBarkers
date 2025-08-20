@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
+
 
 function WhatsappIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -81,7 +83,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Our Address</h3>
-                        <p className="text-muted-foreground">123 Paw Print Lane, Barksville, CA 90210</p>
+                        <p className="text-muted-foreground">Highbanks, Wikham Road, Fareham, PO17 5BT</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -90,7 +92,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Phone Number</h3>
-                        <p className="text-muted-foreground">(555) 123-4567</p>
+                        <p className="text-muted-foreground">07983 159553</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -99,15 +101,42 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Email Address</h3>
-                        <p className="text-muted-foreground">hello@bicknellsbarkers.com</p>
+                        <p className="text-muted-foreground">admin@bicknellsdoglove.org</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
                     <div className="p-3 bg-primary/20 rounded-full">
-                        <WhatsappIcon className="w-6 h-6 text-primary" />
+                        <FaWhatsapp className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">WhatsApp</h3>
+                        <p className="text-muted-foreground">+44 7983 159553</p>
+                    </div>
+                </div>
+                <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/20 rounded-full">
+                        <FaFacebook className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-lg">Facebook</h3>
+                        <p className="text-muted-foreground">(555) 123-4567</p>
+                    </div>
+                </div>
+                <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/20 rounded-full">
+                        <FaInstagram className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-lg">Instagram</h3>
+                        <p className="text-muted-foreground">(555) 123-4567</p>
+                    </div>
+                </div>
+                <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/20 rounded-full">
+                        <FaTiktok className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-lg">TikTok</h3>
                         <p className="text-muted-foreground">(555) 123-4567</p>
                     </div>
                 </div>
