@@ -7,6 +7,29 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+
+
+function WhatsappIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      <path d="M14.05 6.02a9 9 0 0 1 0 7.94m3.52-11.48a15 15 0 0 1 0 15.42" />
+    </svg>
+  );
+}
+
+
 export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
@@ -59,7 +82,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Our Address</h3>
-                        <p className="text-muted-foreground">123 Paw Print Lane, Barksville, CA 90210</p>
+                        <p className="text-muted-foreground">Highbanks, Wickham Road, Fareham, PO17 5BT</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -68,7 +91,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Phone Number</h3>
-                        <p className="text-muted-foreground">(555) 123-4567</p>
+                        <p className="text-muted-foreground">07983 159553</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -77,7 +100,16 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Email Address</h3>
-                        <p className="text-muted-foreground">hello@bicknellsbarkers.com</p>
+                        <p className="text-muted-foreground">admin@bicknellsdoglove.org</p>
+                    </div>
+                </div>
+                <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/20 rounded-full">
+                        <WhatsappIcon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-lg">WhatsApp</h3>
+                        <p className="text-muted-foreground">+44 7983 159553</p>
                     </div>
                 </div>
             </div>

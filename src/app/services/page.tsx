@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Sparkles, Check } from "lucide-react";
+import { Sun, Moon, PawPrint } from "lucide-react";
 
 const daycareFeatures = [
   "Drop-off by 9am – All dogs arrive ready for a fun-filled day ahead.",
@@ -16,14 +16,14 @@ const services = [
   {
     icon: Sun,
     title: "Doggy Daycare",
-    price: "$35 / day",
+    price: "£25 / day",
     description: "A fun-filled day of supervised play, socialization, and activities to keep your dog happy and engaged while you're away. Here's a look at our daily schedule:",
     features: daycareFeatures
   },
   {
     icon: Moon,
     title: "Overnight Boarding",
-    price: "Starting at $50 / night",
+    price: "Starting at £40 / night",
     description: "A safe, comfortable, and loving environment for your dog to stay when you're out of town. Our boarders enjoy the full daycare experience, plus a relaxing evening routine.",
     features: [
       "Our boarders enjoy the full daycare itinerary, plus:",
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               <ul className="space-y-3 text-left columns-1 md:columns-2">
                 {service.features.map(feature => (
                   <li key={feature} className="flex items-start break-inside-avoid">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <PawPrint className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -67,7 +67,7 @@ export default function ServicesPage() {
             </CardContent>
             <CardFooter>
               <Button className="w-full" asChild>
-                <a href="/contact">Book Now</a>
+                <a href="/contact">Enquire Now</a>
               </Button>
             </CardFooter>
           </Card>

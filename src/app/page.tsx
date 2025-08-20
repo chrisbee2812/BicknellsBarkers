@@ -19,7 +19,7 @@ export default function Home() {
       <section className="w-full py-20 md:py-32 bg-secondary text-center">
         <div className="container mx-auto px-4 md:px-6">
           <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tighter mb-4 text-secondary-foreground">
-            Welcome to Bicknell's Barkers Hub
+            Welcome to Bicknell's Barkers
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
             Where every dog is treated like family. Explore our services and find the perfect companion for your lifestyle.
@@ -98,8 +98,8 @@ export default function Home() {
             </Card>
           </div>
            <div className="text-center mt-12">
-            <Button asChild size="lg" variant="link">
-              <Link href="/services">Explore all services &rarr;</Link>
+            <Button asChild size="lg">
+              <Link href="/services">Explore all services</Link>
             </Button>
            </div>
         </div>
