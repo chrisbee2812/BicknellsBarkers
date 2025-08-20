@@ -39,15 +39,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          {/* <PawPrint className="h-6 w-6 text-primary" /> */}
-          <Image
-            src="/bicknellsbarkers.png"
+          {/* <Image
+            src="/bicknellsbarkerswhitesm.png"
             alt="bicknells barkers logo"
-            width={5}
-            height={5}
-            className="aspect-[1/1] w-20 object-cover pl-10 p-2"
-          />
-          <span className="font-bold font-headline text-lg pl-10">Bicknell's Barkers</span>
+            width={100}
+            height={100}
+            className="p-2 object-fill"
+          /> */}
+          <span className="font-bold font-headline text-lg pl-5">Bicknell's Barkers</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map(link => (

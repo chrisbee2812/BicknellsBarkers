@@ -6,23 +6,33 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { PawPrint, Bone, Heart, Moon, Sun } from 'lucide-react';
 
 const featuredDogs = [
-  { name: 'Buddy', breed: 'Golden Retriever', image: 'https://placehold.co/600x400.png', hint: 'golden retriever' },
-  { name: 'Lucy', breed: 'Poodle', image: 'https://placehold.co/600x400.png', hint: 'poodle dog' },
-  { name: 'Max', breed: 'Beagle', image: 'https://placehold.co/600x400.png', hint: 'beagle puppy' },
-  { name: 'Daisy', breed: 'German Shepherd', image: 'https://placehold.co/600x400.png', hint: 'german shepherd' },
-  { name: 'Rocky', breed: 'Bulldog', image: 'https://placehold.co/600x400.png', hint: 'bulldog puppy' },
+  { name: 'Buddy', breed: 'Golden Retriever', image: '/dog1.jpg', hint: 'golden retriever' },
+  { name: 'Lucy', breed: 'Poodle', image: '/dog2.jpg', hint: 'poodle dog' },
+  { name: 'Max', breed: 'Beagle', image: '/dog3.jpg', hint: 'beagle puppy' },
+  { name: 'Daisy', breed: 'German Shepherd', image: '/dog4.jpg', hint: 'german shepherd' },
+  { name: 'Rocky', breed: 'Bulldog', image: '/dog5.jpg', hint: 'bulldog puppy' },
+  { name: 'Burt', breed: 'Bulldog', image: '/dog6.jpg', hint: 'bulldog puppy' }
 ];
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <section className="w-full py-20 md:py-32 bg-secondary text-center">
+      
+      <section className="flex flex-col items-center w-full py-4 md:pt-8 md:pb-16 bg-secondary text-center">
+        <Image
+          src="/bicknellsbarkerswhite.png"
+          alt="bicknells barkers logo"
+          width={200}
+          height={200}
+          className="object-fill"
+        />
         <div className="container mx-auto px-4 md:px-6">
+          
           <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tighter mb-4 text-secondary-foreground">
             Welcome to Bicknell's Barkers
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-            Where every dog is treated like family. Explore our services and find the perfect companion for your lifestyle.
+            Where every dog is treated like family. Explore our services and use our AI tool for dog breed information.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg">
@@ -108,13 +118,13 @@ export default function Home() {
       <section className="w-full py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-4">
-            Find Your Perfect Breed
+            Discover Dog Breed Information With Our AI Tool
           </h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground mb-8">
-            Our AI-powered tool helps you discover the ideal dog breed to match your lifestyle and preferences.
+            Our AI-powered tool helps you discover care information for your dog's breed and will also advise on the ideal dog breed to match your lifestyle and preferences.
           </p>
           <Button asChild size="lg">
-            <Link href="/breed-recommender">Launch Breed Recommender</Link>
+            <Link href="/breed-recommender">Launch AI Tool</Link>
           </Button>
         </div>
       </section>
