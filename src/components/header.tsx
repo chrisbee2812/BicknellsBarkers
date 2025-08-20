@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { PawPrint, Menu, X } from 'lucide-react';
@@ -13,7 +14,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/testimonials', label: 'Testimonials' },
-  { href: '/breed-recommender', label: 'Breed AI' },
+  { href: '/breed-ai', label: 'Breed AI' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -38,8 +39,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <PawPrint className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg">Bicknell's Barkers</span>
+          {/* <PawPrint className="h-6 w-6 text-primary" /> */}
+          <Image
+            src="/bicknellsbarkers.png"
+            alt="bicknells barkers logo"
+            width={5}
+            height={5}
+            className="aspect-[1/1] w-20 object-cover pl-10 p-2"
+          />
+          <span className="font-bold font-headline text-lg pl-10">Bicknell's Barkers</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map(link => (

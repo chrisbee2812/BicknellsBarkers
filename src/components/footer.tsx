@@ -22,7 +22,7 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://www.tiktok.com/@bicknellsbarkers" target="_blank" aria-label="Twitter">
+            <Link href="https://www.tiktok.com/@bicknellsbarkers" target="_blank" aria-label="TikTok">
               <PiTiktokLogo className="h-10 w-10" />
             </Link>
           </Button>

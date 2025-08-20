@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Bicknell's Barkers Hub",
+  title: "Bicknell's Barkers",
   description: 'Your one-stop hub for doggy daycare, boarding, and breed information.',
 };
 

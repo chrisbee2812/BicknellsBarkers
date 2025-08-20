@@ -1,6 +1,6 @@
 
 'use client';
-
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,27 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
-
-
-function WhatsappIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-      <path d="M14.05 6.02a9 9 0 0 1 0 7.94m3.52-11.48a15 15 0 0 1 0 15.42" />
-    </svg>
-  );
-}
 
 
 export default function ContactPage() {
@@ -114,31 +93,40 @@ export default function ContactPage() {
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/20 rounded-full">
-                        <FaFacebook className="w-6 h-6 text-primary" />
+                  <Link href="https://www.facebook.com/profile.php?id=61574947135337" target="_blank" aria-label="Facebook">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary/20 rounded-full">
+                              <FaFacebook className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg">Facebook</h3>                        
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="font-semibold text-lg">Facebook</h3>
-                        <p className="text-muted-foreground">(555) 123-4567</p>
-                    </div>
+                  </Link>
                 </div>
                 <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/20 rounded-full">
-                        <FaInstagram className="w-6 h-6 text-primary" />
+                  <Link href="https://www.instagram.com/bicknells_barkers/" target="_blank" aria-label="Instagram">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary/20 rounded-full">
+                            <FaInstagram className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg">Instagram</h3>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="font-semibold text-lg">Instagram</h3>
-                        <p className="text-muted-foreground">(555) 123-4567</p>
-                    </div>
+                  </Link>
                 </div>
                 <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/20 rounded-full">
-                        <FaTiktok className="w-6 h-6 text-primary" />
+                  <Link href="https://www.tiktok.com/@bicknellsbarkers" target="_blank" aria-label="TikTok">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary/20 rounded-full">
+                            <FaTiktok className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg">TikTok</h3>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="font-semibold text-lg">TikTok</h3>
-                        <p className="text-muted-foreground">(555) 123-4567</p>
-                    </div>
+                  </Link>
                 </div>
             </div>
         </div>
