@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -6,8 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
-
-
 
 function WhatsappIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -82,7 +81,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Our Address</h3>
-                        <p className="text-muted-foreground">Highbanks, Wickham Road, Fareham, PO17 5BT</p>
+                        <p className="text-muted-foreground">123 Paw Print Lane, Barksville, CA 90210</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -91,7 +90,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Phone Number</h3>
-                        <p className="text-muted-foreground">07983 159553</p>
+                        <p className="text-muted-foreground">(555) 123-4567</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -100,7 +99,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Email Address</h3>
-                        <p className="text-muted-foreground">admin@bicknellsdoglove.org</p>
+                        <p className="text-muted-foreground">hello@bicknellsbarkers.com</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -109,7 +108,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">WhatsApp</h3>
-                        <p className="text-muted-foreground">+44 7983 159553</p>
+                        <p className="text-muted-foreground">(555) 123-4567</p>
                     </div>
                 </div>
             </div>
