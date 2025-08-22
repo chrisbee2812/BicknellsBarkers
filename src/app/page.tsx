@@ -6,12 +6,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { PawPrint, Bone, Heart, Moon, Sun } from 'lucide-react';
 
 const featuredDogs = [
-  { name: 'Frodo', breed: 'Puggle', image: '/dog1.jpg', hint: 'puggle' },
-  { name: 'Elsie', breed: 'Miniature LH Daschund', image: '/dog2.jpg', hint: 'miniature long haired daschund' },
+  { name: 'Rigby', breed: 'Puggle', image: '/dog1.jpg', hint: 'puggle' },
+  { name: 'Trixie', breed: 'Miniature LH Daschund', image: '/dog2.jpg', hint: 'miniature long haired daschund' },
   { name: 'Night On The Beach', breed: 'Various Breeds', image: '/dog3.jpg', hint: 'night on the beach' },
-  { name: 'Nina', breed: 'Newfoundland', image: '/dog4.jpg', hint: 'newfoundland' },
-  { name: 'Buddy and Lucca', breed: 'Cockapoo and Cocker Spaniel', image: '/dog5.jpg', hint: 'Cockapoo and Cocker Spaniel' },
-  { name: 'Cosmo', breed: 'Golden Retriever', image: '/dog6.jpg', hint: 'golden retriever' }
+  { name: 'Winston', breed: 'Newfoundland', image: '/dog4.jpg', hint: 'newfoundland' },
+  { name: 'Zora and Jinx', breed: 'Cockapoo and Cocker Spaniel', image: '/dog5.jpg', hint: 'Cockapoo and Cocker Spaniel' },
+  { name: 'Baron', breed: 'Golden Retriever', image: '/dog6.jpg', hint: 'golden retriever' }
 ];
 
 export default function Home() {
@@ -47,9 +47,12 @@ export default function Home() {
 
       <section className="w-full py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">
-            Meet Our Featured Pups
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">
+            Meet Our Featured Pups 
           </h2>
+          <p className="text-xl md:text-2xl font-headline font-bold text-center mb-12 mt-0 bt-0">
+            (names have been changed to protect the innocent)
+          </p>
           <Carousel
             opts={{
               align: 'start',
