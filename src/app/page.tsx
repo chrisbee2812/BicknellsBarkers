@@ -7,7 +7,7 @@ import { PawPrint, Bone, Heart, Moon, Sun } from 'lucide-react';
 
 const featuredDogs = [
   { name: 'Lord Snuffles', breed: 'Puggle', image: '/dog1.jpg', hint: 'puggle' },
-  { name: 'Schatzi', breed: 'Miniature LH Daschund', image: '/dog2.jpg', hint: 'miniature long haired daschund' },
+  { name: 'Butterscotch', breed: 'Miniature LH Daschund', image: '/dog2.jpg', hint: 'miniature long haired daschund' },
   { name: 'Night On The Beach', breed: 'Various Breeds', image: '/dog3.jpg', hint: 'night on the beach' },
   { name: 'Nerissa', breed: 'Newfoundland', image: '/dog4.jpg', hint: 'newfoundland' },
   { name: 'Rigatoni and Merry', breed: 'Cockapoo and Cocker Spaniel', image: '/dog5.jpg', hint: 'Cockapoo and Cocker Spaniel' },
