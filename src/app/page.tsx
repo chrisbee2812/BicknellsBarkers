@@ -124,7 +124,7 @@ export default function Home() {
             Our AI-powered tool helps you discover care information for your dog's breed and will also advise on the ideal dog breed to match your lifestyle and preferences.
           </p>
           <Button asChild size="lg">
-            <Link href="/breed-recommender">Launch AI Tool</Link>
+            <Link href="/breed-ai">Launch AI Tool</Link>
           </Button>
         </div>
       </section>
