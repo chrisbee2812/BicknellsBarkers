@@ -1,6 +1,9 @@
 
 'use client';
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import useWeb3Forms from "@web3forms/react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,6 +14,38 @@ import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 
 
 export default function ContactPage() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitSuccessful, isSubmitting },
+  } = useForm({
+    mode: "onTouched",
+  });
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [message, setMessage] = useState("");
+
+  // Please update the Access Key in the .env
+  const apiKey = process.env.PUBLIC_ACCESS_KEY || "9a0e090e-13ef-45ad-8047-5ec30c641cdb";
+
+  const { submit: onSubmit } = useWeb3Forms({
+    access_key: apiKey,
+    settings: {
+      from_name: "Bicknell's Barkers Website",
+      subject: "New Contact Message from your Website",
+    },
+    onSuccess: (msg, data) => {
+      setIsSuccess(true);
+      setMessage(msg);
+      reset();
+    },
+    onError: (msg, data) => {
+      setIsSuccess(false);
+      setMessage(msg);
+    },
+  });
+
+
   return (
     <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
       <div className="text-center max-w-3xl mx-auto">
@@ -28,27 +63,137 @@ export default function ContactPage() {
               <CardDescription>Fill out the form below and our team will be in touch shortly.</CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <Input
+                    type="checkbox"
+                    id=""
+                    className="hidden"
+                    style={{ display: "none" }}
+                    {...register("botcheck")}></Input>
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your Name" />
+                    <Input 
+                      id="name" 
+                      type="text" 
+                      placeholder="Your Name"
+                      className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm  ${
+                        errors.name
+                          ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
+                          : ""
+                      }`}
+                      {...register("name", { 
+                        required: "Name is required" 
+                      })} 
+                    />
+                    {errors.name && (
+                      <div className="mt-1 text-red-600">
+                        <small>{typeof errors.name?.message === "string" ? errors.name.message : null}</small>
+                      </div>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="your@email.com" 
+                      className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm  ${
+                        errors.email
+                          ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
+                          : ""
+                      }`}
+                      {...register("email", { 
+                        required: "Email is required", 
+                        pattern: {
+                          value: /^\S+@\S+$/i,
+                          message: "Please enter a valid email",
+                        },
+                      })}
+                    />
+                    {errors.email && (
+                      <div className="mt-1 text-red-600">
+                        <small>{typeof errors.email?.message === "string" ? errors.email.message : null}</small>
+                      </div>
+                    )}
                   </div>
                 </div>
                  <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="e.g., Booking Inquiry" />
+                  <Input 
+                    id="subject" 
+                    type="text" 
+                    placeholder="e.g., Booking Inquiry"
+                    className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm  ${
+                        errors.subject
+                          ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
+                          : ""
+                      }`}
+                    {...register("subject", { 
+                      required: "Subject is required" 
+                    })}  
+                  />
+                  {errors.subject && (
+                      <div className="mt-1 text-red-600">
+                        <small>{typeof errors.subject?.message === "string" ? errors.subject.message : null}</small>
+                      </div>
+                    )}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Tell us how we can help..." className="min-h-[150px]" />
+                  <Textarea 
+                    id="message" 
+                    placeholder="Tell us how we can help..."
+                    // className="min-h-[150px]"
+                    className={`flex min-h-[150px] h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm  ${
+                        errors.message
+                          ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
+                          : ""
+                      }`}
+                    {...register("message", { 
+                      required: "Message is required" 
+                    })}   
+                  />
+                  {errors.message && (
+                      <div className="mt-1 text-red-600">
+                        <small>{typeof errors.message?.message === "string" ? errors.message.message : null}</small>
+                      </div>
+                    )}
                 </div>
-                <Button type="submit" className="w-full sm:w-auto">Send Message</Button>
+                <Button type="submit" className="w-full sm:w-auto">
+                  {isSubmitting ? (
+                    <svg
+                      className="w-5 h-5 mx-auto text-white dark:text-black animate-spin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24">
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  ) : (
+                    "Send Message"
+                  )}
+                </Button>
               </form>
+              {isSubmitSuccessful && isSuccess && (
+                <div className="mt-3 text-sm text-center text-green-500">
+                  {message || "Success. Message sent successfully"}
+                </div>
+              )}
+              {isSubmitSuccessful && !isSuccess && (
+                <div className="mt-3 text-sm text-center text-red-500">
+                  {message || "Something went wrong. Please try later."}
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
