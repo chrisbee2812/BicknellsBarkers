@@ -50,7 +50,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">
             Meet Our Featured Pups 
           </h2>
-          <p className="text-xl md:text-2xl font-headline font-bold text-center mb-12 mt-0 bt-0">
+          <p className="text-lg md:text-xl font-headline font-bold text-center mb-12 mt-0 bt-0">
             (names have been changed to protect the innocent)
           </p>
           <Carousel
